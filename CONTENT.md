@@ -1,0 +1,1 @@
+pre-write all content for a website before you start coding it in HTML!
