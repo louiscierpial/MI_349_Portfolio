@@ -12,3 +12,7 @@ Contact: Feel free to reach out using any of the methods listed below!
 cierpia2@msu.edu *link*
 LinkedIn: *link*
 Handshake *link*
+--------------------------------------------------------------------------------------------------
+Color scheme: https://coolors.co/18453b-e4572e-eee5e9-a0e8af-669bbc
+use google fonts for fonts! Must import them into my css file (make sure it's readable)
+Use "em" or "rem" as units for font size and padding (in this order) (follow prof's css formatting in his sample website).
