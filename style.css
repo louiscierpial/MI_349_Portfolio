@@ -1,0 +1,33 @@
+:root{
+    --primaryBg: #e0e0e2;
+    --primaryText: #502419;
+    --primaryNav: #18453b;
+    --standardGap: 40px;
+} /*Custom variables assigned to specific values. px standard-gap = 40...*/
+
+.seniorPhoto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 9%;
+}
+
+nav{
+    background: #18453b;
+    color: white;
+    margin: 20px;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+}
+#projects article{
+    margin: var(--standard-gap);
+}
+
+
+
