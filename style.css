@@ -3,31 +3,128 @@
     --primaryText: #502419;
     --primaryNav: #18453b;
     --standardGap: 40px;
+    --subStandardGap: 1.5rem;
 } /*Custom variables assigned to specific values. px standard-gap = 40...*/
 
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--primaryBg);
+    color: var(--primaryText);
+    margin-left: var(--subStandardGap);
+    margin-right: var(--subStandardGap);
+    margin-bottom: var(--subStandardGap);
+}
+
+p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+main h2{
+    font-size: 2.3rem;
+    border-bottom: 1px solid gray;
+}
+
+h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer{
+    margin: var(--subStandardGap);
+    padding: var(--subStandardGap);
+    background: #706993;
+    color: var(--primaryBg);
+    text-align: center;
+    margin-bottom: -1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+nav{
+    background: var(--primaryNav);
+    margin: 1.25rem auto;
+    padding: 1rem 1.9rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 3.75rem;
+}
+
+nav a{
+    color: var(--primaryBg);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover{
+    color: #9D9DA3;
+}
+
+.seniorPhotoContainer{
+    text-align: center;
+    width: 100%;
+}
+
 .seniorPhoto{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
     width: 9%;
 }
 
-nav{
-    background: #18453b;
-    color: white;
-    margin: 20px;
+.alienImages{
+    text-align: center;
+    margin-top: 20px;
 }
 
-body {
-    font-family: sans-serif;
-    background: var(--primary-bg);
-    color: var(--primary-text);
+.alienImages img{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4%;
 }
+
 #projects article{
-    margin: var(--standard-gap);
+    margin: var(--standardGap);
+    padding: 20px;
+    background: #EFEFF0;
 }
+
+#hero{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#contact address{
+    font-style: normal;
+    margin-left: var(--standardGap);
+    font-size: 1.3rem;
+}
+
+#contact address a{
+    color: var(--primaryText);
+}
+
+#contact address a:hover{
+    color: var(--primaryNav);
+    text-decoration: underline;
+}
+
+
 
 
 
