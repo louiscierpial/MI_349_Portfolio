@@ -6,23 +6,43 @@
     --subStandardGap: 1.5rem;
 } /*Custom variables assigned to specific values. px standard-gap = 40...*/
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: var(--primaryBg);
     color: var(--primaryText);
-    margin-left: var(--subStandardGap);
+    /*margin-left: var(--subStandardGap);
     margin-right: var(--subStandardGap);
-    margin-bottom: var(--subStandardGap);
+    margin-bottom: var(--subStandardGap);*/
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1150px;
+    padding: 1rem;
 }
 
 p{
     line-height: 1.6;
     margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+h1{
+        font-size: 1.25em;
 }
 
 img{
     max-width: 100%;
     height: auto;
+}
+
+main{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 1rem;
 }
 
 main h2{
@@ -31,8 +51,13 @@ main h2{
 }
 
 h3{
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: bold;
+}
+
+header{
+    text-align: center;
+    width: 100%;
 }
 
 footer{
@@ -41,6 +66,7 @@ footer{
     background: #706993;
     color: var(--primaryBg);
     text-align: center;
+    font-size: 0.7rem;
     margin-bottom: -1.5rem;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -48,9 +74,12 @@ footer{
 
 nav{
     background: var(--primaryNav);
-    margin: 1.25rem auto;
-    padding: 1rem 1.9rem;
-    width: fit-content;
+   margin: 1.25rem auto;
+    padding: 0.75rem 1rem;
+    /* width: fit-content;
+    border-radius: 0.5rem;*/
+    grid-column: span 5 / span 5;
+    align-self: center;
     border-radius: 0.5rem;
 }
 
@@ -60,14 +89,14 @@ nav ul{
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 3.75rem;
+    gap: 1rem;
 }
 
 nav a{
     color: var(--primaryBg);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: color 0.2s ease;
 }
 
@@ -75,18 +104,13 @@ nav a:hover{
     color: #9D9DA3;
 }
 
-.seniorPhotoContainer{
-    text-align: center;
-    width: 100%;
-}
-
 .seniorPhoto{
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 9%;
+    width: 15%;
 }
-
+/*
 .alienImages{
     text-align: center;
     margin-top: 20px;
@@ -96,12 +120,117 @@ nav a:hover{
     display: inline-block;
     vertical-align: middle;
     margin: 0 4%;
+}*/
+
+#projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--subStandardGap);
 }
 
+#projects h2{
+    grid-column: 1 / -1;
+}
+
+/*Prompt: "Help me develop CSS code that makes all images in my #projects ID centered and wrapping properly for any screen width (from 0px to 1024+px). Please only use CSS and do not modify any of my HTML file."*/
 #projects article{
-    margin: var(--standardGap);
+    margin: 0;
     padding: 20px;
     background: #EFEFF0;
+    text-align: center;
+}
+
+#projects article h3,
+#projects article p{
+    text-align: left;
+}
+
+#projects img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 0.5rem);
+    height: auto;
+    margin: 0.5rem 0.25rem;
+}
+
+/*Prompt: "I am running into an issue with modulating text size based on different dimensions of screens. I'm looking to have a mobile-first approach utilizing @media queries for modulating text size and other proportions for different screen dimensions, using the min-width property within media queries. Can you help me develop some code that modulates <p> text size based on screen dimensions? Please only modify CSS code and do not touch any HTML."*/
+
+@media (min-width: 576px){
+    p{
+        font-size: 1.15rem;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    nav{
+        padding: 1rem 1.5rem;
+    }
+
+    nav ul{
+        gap: 2rem;
+    }
+
+    nav a{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px){
+    p{
+        font-size: 1.25rem;
+    }
+
+    h1{
+        font-size: 1.75em;
+    }
+
+    nav{
+        padding: 1.25rem 1.75rem;
+    }
+
+    nav ul{
+        gap: 2.75rem;
+    }
+
+    nav a{
+        font-size: 1.85rem;
+    }
+
+    #projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px){
+    body{
+        padding: 75px;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    main{
+        padding: 50px;
+    }
+
+    p{
+        font-size: 1.4rem;
+    }
+
+    nav{
+        padding: 1rem 1.9rem;
+    }
+
+    nav ul{
+        gap: 3.75rem;
+    }
+
+    nav a{
+        font-size: 2.2rem;
+    }
 }
 
 #hero{
@@ -111,8 +240,12 @@ nav a:hover{
 
 #contact address{
     font-style: normal;
-    margin-left: var(--standardGap);
-    font-size: 1.3rem;
+    margin-left: 0;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #contact address a{
@@ -124,7 +257,25 @@ nav a:hover{
     text-decoration: underline;
 }
 
+/*Prompt: "I am running into an issue with modulating text size based on different dimensions of screens. I'm looking to have a mobile-first approach utilizing @media queries for modulating text size and other proportions for different screen dimensions, using the min-width property within media queries. Can you help me develop some code that modulates <p> text size based on screen dimensions? Please only modify CSS code and do not touch any HTML."*/
+@media (min-width: 576px){
+    #contact address{
+        font-size: 1.15rem;
+        gap: 2rem;
+    }
+}
 
+@media (min-width: 768px){
+    #contact address{
+        font-size: 1.25rem;
+        gap: 2.75rem;
+    }
+}
 
-
-
+@media (min-width: 1024px){
+    #contact address{
+        margin-left: var(--standardGap);
+        font-size: 1.4rem;
+        gap: 60px;
+    }
+}
