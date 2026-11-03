@@ -63,7 +63,7 @@ header{
 footer{
     margin: var(--subStandardGap);
     padding: var(--subStandardGap);
-    background: #706993;
+    background: #0A2463;
     color: var(--primaryBg);
     text-align: center;
     font-size: 0.7rem;
@@ -253,7 +253,7 @@ nav a:hover{
 }
 
 #contact address a:hover{
-    color: var(--primaryNav);
+    color:#8FB339;
     text-decoration: underline;
 }
 
